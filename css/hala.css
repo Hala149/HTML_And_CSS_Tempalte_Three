@@ -18,6 +18,7 @@
  .main-title{
    margin: 0 auto 80px;
    border: 2px solid black;
+   border-radius: 20px;
    padding: 10px 20px;
    font-size: 30px;
    font-weight: bold;
@@ -404,6 +405,7 @@ header .megamenu  {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     position: relative;
+    transition: var(--main-duration);
 }
 .articles .container{
     display: grid;
@@ -463,6 +465,7 @@ header .megamenu  {
     padding-bottom: var(--section-padding);
     position: relative;
     background-color: var(--section-bg);
+    transition: var(--main-duration);
 }
 .gallery .container{
     display: grid;
@@ -507,6 +510,8 @@ header .megamenu  {
     padding-bottom: var(--section-padding);
     position: relative;
     background-color: white;
+        transition: var(--main-duration);
+
 }
 .features .container{
     display: grid;
@@ -520,7 +525,9 @@ header .megamenu  {
 .features .box .img-hold{
     position: relative;
     overflow: hidden;
+    height: 50%;
 }
+
 .features .box .img-hold::before{
     content: "";
     position: absolute;
@@ -579,9 +586,27 @@ header .megamenu  {
     border-radius: 6px;
     transition: var(--main-duration);
 }
+@media (max-width:767px) {
+    .features .box h2{
+        font-size: 30px;
+}
+   .features .box p{
+ line-height: 1.5;
+    font-size: 16px;
+    padding: 15px;
+    margin: 15px 0 5px;
+}
+.features .box a{
+    font-size: 20px;
+    margin: 0 auto 30px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 6px;
+    transition: var(--main-duration);
+}
+}
 .features .quality .img-hold::before{
      background-color: rgb(137 136 144 / 60%);
-;
 }
 .features .quality h2::after{
     background-color: #898890;
@@ -1054,6 +1079,12 @@ margin-right: 0 0 40px;
     gap: 20px;
 }
 @media (max-width:767px) {
+    .events .info .time{
+    gap: 15px;
+}
+.events .subscribe{
+    margin-top: 0;
+}
     .events .subscribe form{
         max-width: 100%;
         padding: 20px;
@@ -1324,6 +1355,19 @@ margin-right: 0 0 40px;
     margin: 0 auto 50px;
     position: relative;
 }
+@media (max-width:767px) {
+    .stats .container{
+    grid-template-columns: repeat(auto-fill ,minmax(180px ,1fr));
+    gap: var( --main-gap);
+    }
+   .stats h2{
+    font-weight: bold;
+    font-size: 30px;
+    width: fit-content;
+    margin: 0 auto 50px;
+    position: relative;
+}
+}
 .stats .box{
     background-color: white;
     padding: 30px 15px;
@@ -1332,6 +1376,12 @@ margin-right: 0 0 40px;
     opacity: .8;
     transition: var(--main-duration);
 }
+@media (max-width:767px) {
+   .stats .box{
+    padding: 30px 10px;      
+   }
+}
+
 .stats .box:hover {
     opacity: 1;
 }
@@ -1363,6 +1413,14 @@ margin-right: 0 0 40px;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 15px;
+}
+@media (max-width:767px) {
+    .stats .box{
+        box-shadow:0px 12px 20px 0px rgb(0 0  0 / 13%) , 0px 2px 4px 0px rgb(0 0 0 / 12%) ;
+    }
+   .stats .box .number{
+       font-size: 35px;
+   } 
 }
 .stats .box .text{
     color: var(--main-color);
@@ -1448,7 +1506,6 @@ margin-right: 0 0 40px;
     background-color: var(--main-color);
 }
 
-
 .discount .content{
     text-align: center;
     padding: 0 20px;
@@ -1461,11 +1518,23 @@ margin-right: 0 0 40px;
     line-height: 1.6;
     font-size: 18px;
     max-width: 500px;
+    text-align: center;
 }
 .discount .content img{
     width: 300px;
     max-width: 100%;
 }
+@media (max-width:767px) {
+    .discount .content img{
+       width: 200px;
+    }
+    .discount .content h2{
+    font-size: 35px;
+    
+}
+
+}
+
 
 /* End Discount */
 /* Start Footer */
@@ -1625,8 +1694,8 @@ color: var(--footer-color);
         height: var(--main-t-circle);
     }
     100%{
-         left: 0;
-        border-radius: 0;
+        left: 0;
+        border-radius:  20px 0 0 20px ;
         width: 50%;
         height: 100%;
     }
@@ -1639,7 +1708,7 @@ color: var(--footer-color);
     }
     100%{
         right: 0;
-        border-radius: 0;
+        border-radius: 0 20px 20px 0 ;
         width: 50%;
         height: 100%;
     }
