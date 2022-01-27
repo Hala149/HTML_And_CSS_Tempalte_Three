@@ -418,7 +418,7 @@ header .megamenu  {
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     background-color: white;
     overflow: hidden;
-    transition: transform var(--main-transition), box-shadow var(--main-transition);
+    transition: transform var(--main-duration), box-shadow var(--main-duration);
 }
 .articles .box:hover{
     box-shadow: 0 2px 15px rgb(0 0 0 / 30%);
